@@ -15,8 +15,8 @@ class Solution {
                     ||(st.peek() == '{' && arr[i] == '}')
                     ||(st.peek() == '[' && arr[i] == ']')  ){
                         st.pop();
-                    }else{
-                        return false;
+                }else{
+                    return false;
                 }
             }
         }
