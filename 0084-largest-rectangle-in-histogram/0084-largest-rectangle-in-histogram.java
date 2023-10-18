@@ -35,6 +35,7 @@ class Solution {
         return temp;
     }
     
+    //same prevSmaller method but "traversing from back" AND "when stack is empty add length of array not -1"
     public int[] nextSmaller(int[] heights){
         int n = heights.length;
         
