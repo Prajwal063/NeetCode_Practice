@@ -4,16 +4,18 @@ class Solution {
         
         int n = heights.length;
         
+        //call two methods
         int[] prevMin = prevSmaller(heights);
         int[] nextMin = nextSmaller(heights);
         
         for(int i = 0; i<n; i++){
-            int cur = (nextMin[i] - prevMin[i] - 1) * heights[i];
+            int cur = (nextMin[i] - prevMin[i] - 1) * heights[i]; //gives area (refer video)
             ans = Math.max(ans, cur);
         }
         return ans;
     }
     
+    //refer nextSmaller/prevSmaller element in array problem or video
     public int[] prevSmaller(int[] heights){
         int n = heights.length;
         
