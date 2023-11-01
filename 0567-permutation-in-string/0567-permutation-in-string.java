@@ -30,7 +30,8 @@ class Solution {
             if(count == 0)
                 return true;
             
-            
+            //if character at start (i.e. i) is 0, then increment it
+            //thus returning back the original arr formed at line 15 to 17 and "GET OUT OF WHILE LOOP"
             if(j - i == s1.length() && arr[s2.charAt(i++) - 'a']++ >= 0)
                 count++;
         }
