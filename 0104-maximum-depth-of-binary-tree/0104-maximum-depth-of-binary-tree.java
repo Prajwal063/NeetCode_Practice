@@ -24,9 +24,7 @@ class Solution {
        
         int right = maxDepth(root.right);
         
-        count = Math.max(left, right)+1;
-        
-        
+        count = Math.max(left, right)+1;   
         
         return count;
     }
