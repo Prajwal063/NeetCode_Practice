@@ -1,21 +1,27 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-         int n = nums.length;
-         int[] ans = new int[n];
-         int prod = 1;
-
-         for(int i = 0; i<n; i++){
-             prod*=nums[i];
-             ans[i]=prod;
-         }
-
-        prod = 1;
-         for(int i = n-1; i>0; i--){
-             ans[i]=ans[i-1]*prod;
-             prod*=nums[i];
-         }
-
-         ans[0]=prod;
-         return ans;
+        int n = nums.length;
+        int[] ans= new int[n];
+        int runningProduct = 1;
+        
+        //let nums = [1,2,3,4]
+        
+        //left pass -> product of left side of current index -> ans = [1, 1, 2, 6]
+        for(int i = 0; i<n; i++){
+            ans[i] = runningProduct;
+            runningProduct *= nums[i]; 
+        }
+        
+        //right pass -> product of left side of current index therefore;
+        
+        //ans[i] =                         ans[i] * runningProduct;
+        //ans[i] = [(1*24), (1*12), (2*4), (6*1)] -> [24,12,8,6]
+        
+        runningProduct = 1;
+        for(int i = n-1; i>=0; i--){
+            ans[i] *= runningProduct;
+            runningProduct *= nums[i];
+        }
+        return ans;
     }
 }
