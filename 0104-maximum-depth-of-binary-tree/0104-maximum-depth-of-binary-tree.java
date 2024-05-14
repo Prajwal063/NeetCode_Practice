@@ -20,11 +20,12 @@ class Solution {
         if(root == null){
             return 0;
         }
+        
         int left = maxDepth(root.left);
-       
+        
         int right = maxDepth(root.right);
         
-        count = Math.max(left, right)+1;   
+        count = Math.max(left, right) + 1;
         
         return count;
     }
