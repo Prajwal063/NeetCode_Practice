@@ -19,15 +19,16 @@ class Solution {
         count = 0;
         helper(root, Integer.MIN_VALUE);
         return count;
-       
     }
     
     void helper(TreeNode root, int max){
         if(root == null)
             return;
-        if(root.val >= max )
+        if(root.val >= max )    //if current node value is greater than max, then it's a good node
             count++;
-        max = Math.max(max, root.val);
+        
+        max = Math.max(max, root.val);  //update max
+        
         helper(root.left, max);
         helper(root.right, max);
     }
