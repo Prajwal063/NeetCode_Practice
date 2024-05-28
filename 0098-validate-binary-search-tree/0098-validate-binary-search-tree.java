@@ -21,7 +21,8 @@ class Solution {
     boolean isBinarySearchTree(TreeNode root, Integer min, Integer max) {	
 		if(root == null)									
 			return true;
-		
+        
+        //Edge cases if left and right nodes are null *important*		
 		if((min != null && root.val <= min) || max != null && root.val >= max)			
 			return false;
 		
