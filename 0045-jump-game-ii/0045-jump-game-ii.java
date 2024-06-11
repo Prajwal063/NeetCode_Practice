@@ -4,7 +4,8 @@ class Solution {
 
         while (r < nums.length - 1) {
             fur = 0;
-            for (int i = l; i <= r; i++) fur = Math.max(fur, i + nums[i]);
+            for (int i = l; i <= r; i++) 
+                fur = Math.max(fur, i + nums[i]);
             l = r + 1;
             r = fur;
             res++;
