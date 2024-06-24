@@ -14,7 +14,7 @@ class Solution {
                 a++;
             }
             else{
-                return new int[] {a+1, z+1};
+                break;
             }
         }
         return new int[]{a+1, z+1};
