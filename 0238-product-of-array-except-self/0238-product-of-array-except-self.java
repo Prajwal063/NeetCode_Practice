@@ -7,9 +7,10 @@ class Solution {
         //let nums = [1,2,3,4]
         
         //left pass -> product of left side of current index -> ans = [1, 1, 2, 6]
+        
         for(int i = 0; i<n; i++){
-            ans[i] = runningProduct;
-            runningProduct *= nums[i]; 
+            ans[i] = runningProduct;    //[0,0,0,0] -> [1,0,0,0] -> [1,1,0,0] -> [1,1,2,0] -> [1,1,2,6]
+            runningProduct *= nums[i];  //                1      ->  1*1 = 1  ->  1*2 = 2  ->  2*3 = 6 
         }
         
         //right pass -> product of left side of current index therefore;
