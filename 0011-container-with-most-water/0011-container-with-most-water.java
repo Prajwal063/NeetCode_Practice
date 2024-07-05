@@ -6,11 +6,11 @@ class Solution {
         
         while(left < right){
             if(height[left] < height[right]){
-                max = Math.max(max, height[left] * (right - left));
+                max = Math.max(max, height[left] * (right - left)); //finding area => height[a] -> length, b-a -> breadth
                 left++;
             }
             else{
-                max = Math.max(max, height[right] * (right - left));
+                max = Math.max(max, height[right] * (right - left));    //finding area => height[a] -> length, b-a -> breadth
                 right--;
             }
         }
