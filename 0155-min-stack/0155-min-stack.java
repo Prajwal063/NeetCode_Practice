@@ -26,7 +26,7 @@ class MinStack {
     }
     
     public int getMin() {
-       return min_values.peek();
+        return min_values.peek();
     }
 }
 
